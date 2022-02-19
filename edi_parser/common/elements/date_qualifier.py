@@ -9,6 +9,8 @@ date_qualifiers = {
 	'472': 'service',
 	'232': 'claim statement period start',
 	'233': 'claim statement period end',
+	'431': 'onset of illness',
+	'454': 'initial treatment'
 }
 
 

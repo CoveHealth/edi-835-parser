@@ -1,6 +1,5 @@
 from typing import Union
 from datetime import datetime
-import logging.config
 from edi_835_parser.elements import Element
 
 from log_conf import Logger

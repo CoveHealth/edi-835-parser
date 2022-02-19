@@ -1,5 +1,5 @@
 from edi_835_parser.elements.identifier import Identifier
-from edi_835_parser.elements.contact_function_code import ContactFunctionCode
+from edi_parser.common.elements.contact_function_code import ContactFunctionCode
 from edi_835_parser.segments.utilities import split_segment, get_element
 
 

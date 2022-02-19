@@ -6,7 +6,15 @@ entity_codes = {
 	'74': 'insured',
 	'82': 'rendering provider',
 	'85': 'billing provider',
-	'IL': 'subscriber'
+	'IL': 'insured or subscriber',
+	'41': 'submitter',
+	'40': 'receiver',
+	'87': 'pay-to-provider',
+	'PE': 'payee',
+	'PR': 'payer',
+	'77': 'service location',
+	'DQ': 'supervising physician',
+	'PW': 'pickup address'
 }
 
 
