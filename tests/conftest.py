@@ -31,11 +31,11 @@ def sample_835():
 # @pytest.fixture
 # def sample2_835():
 # 	path = current_path + '/test_edi_835_files/sample2_835.txt'
-# 	return edi_835_parser.parse(path)
+# 	return remits_parser.parse(path)
 #
 #
 # @pytest.fixture
 # def sample3_835():
 # 	path = current_path + '/test_edi_835_files/sample3_835.txt'
-# 	return edi_835_parser.parse(path)
+# 	return remits_parser.parse(path)
 

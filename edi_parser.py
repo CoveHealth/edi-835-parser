@@ -1,7 +1,7 @@
-from edi_835_parser import parse
-from edi_835_parser import find_edi_835_files
-from log_conf import Logger
+from edi_parser import find_edi_835_files
+from edi_parser import parse
 
+from log_conf import Logger
 
 input_dir = 'input'
 output_dir = 'output/remits_poc'

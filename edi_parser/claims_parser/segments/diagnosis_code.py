@@ -1,24 +1,25 @@
 from edi_parser.common.elements.identifier import Identifier
 from edi_parser.common.segments.utilities import split_segment, get_element
 
+from edi_parser.claims_parser.elements.diagnosis_code import DiagnosisCode
+from edi_parser.claims_parser.elements.diagnosis_code_type import DiagnosisCodeType
 
-class Location:
-	identification = 'N4'
+
+class DiagnosisCode:
+	identification = 'HI'
 
 	identifier = Identifier()
+	code_type1 = DiagnosisCodeType()
+	code1 = DiagnosisCode()
 
 	def __init__(self, segment: str):
 		self.index = segment.split(':', 1)[0]
 		segment = segment.split(':', 1)[1]
-
-		self.segment = segment
 		segment = split_segment(segment)
 
 		self.identifier = segment[0]
-		self.city = segment[1]
-		self.state = segment[2]
-		self.zip_code = segment[3]
-		self.country = get_element(segment, 4)
+		self.code_type1 = segment[1]
+		self.code1 = get_element(segment, 2)
 
 	def __repr__(self):
 		return '\n'.join(str(item) for item in self.__dict__.items())

@@ -1,4 +1,4 @@
-from edi_835_parser.elements import Element
+from edi_parser.common.elements import Element
 
 contact_function_codes = {
     'CX': 'payers_claim_office',

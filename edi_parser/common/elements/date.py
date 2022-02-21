@@ -1,8 +1,10 @@
-from typing import Union
 from datetime import datetime
-from edi_835_parser.elements import Element
+from typing import Union
+
+from edi_parser.common.elements import Element
 
 from log_conf import Logger
+
 
 class Date(Element):
 

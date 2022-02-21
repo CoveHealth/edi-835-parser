@@ -1,4 +1,4 @@
-from edi_835_parser.elements import Element
+from edi_parser.common.elements import Element
 
 # https://ushik.ahrq.gov/ViewItemDetails?system=mdr&itemKey=133081000
 amount_qualifiers = {

@@ -1,5 +1,5 @@
-from edi_835_parser.elements.identifier import Identifier
-from edi_835_parser.segments.utilities import split_segment, get_element
+from edi_parser.common.elements.identifier import Identifier
+from edi_parser.common.segments.utilities import split_segment, get_element
 
 
 class Address:

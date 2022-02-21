@@ -1,4 +1,4 @@
-from edi_835_parser.elements import Element
+from edi_parser.common.elements import Element
 
 # https://ushik.ahrq.gov/ViewItemDetails?&system=sdo&itemKey=133213000
 reference_qualifiers = {
@@ -26,7 +26,6 @@ reference_qualifiers = {
 	'NF': 'NAIC code',
 	'Y4': 'agency claim number',
 	'4N': 'Special Payment Reference Number'
-
 }
 
 

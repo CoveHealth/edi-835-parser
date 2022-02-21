@@ -1,11 +1,15 @@
+from edi_parser.common.elements.date import Date as DateElement
+from edi_parser.common.elements.date_qualifier import DateQualifier
 from edi_parser.common.elements.identifier import Identifier
-from edi_parser.common.segments.utilities import split_segment, get_element
+from edi_parser.common.segments.utilities import split_segment
 
 
-class Location:
-	identification = 'N4'
+class Date:
+	identification = 'DTP'
 
 	identifier = Identifier()
+	date = DateElement()
+	qualifier = DateQualifier()
 
 	def __init__(self, segment: str):
 		self.index = segment.split(':', 1)[0]
@@ -15,10 +19,9 @@ class Location:
 		segment = split_segment(segment)
 
 		self.identifier = segment[0]
-		self.city = segment[1]
-		self.state = segment[2]
-		self.zip_code = segment[3]
-		self.country = get_element(segment, 4)
+		self.qualifier = segment[1]
+		self.qualifier_code = segment[1]
+		self.date = segment[2]
 
 	def __repr__(self):
 		return '\n'.join(str(item) for item in self.__dict__.items())

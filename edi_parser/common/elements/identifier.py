@@ -1,6 +1,6 @@
 from typing import Optional
 
-from edi_835_parser.elements import Element
+from edi_parser.common.elements import Element
 
 
 class Identifier(Element):

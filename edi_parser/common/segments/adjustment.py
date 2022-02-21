@@ -1,5 +1,5 @@
-from edi_835_parser.elements.identifier import Identifier
-from edi_835_parser.segments.utilities import split_segment, get_element
+from edi_parser.common.elements.identifier import Identifier
+from edi_parser.common.segments.utilities import split_segment, get_element
 
 
 class Adjustment:
@@ -19,8 +19,6 @@ class Adjustment:
 		self.reason_code = segment[2]
 		self.amount = segment[3]
 		self.quantity = get_element(segment, 4)
-
-		# if len(self.segment) > 5:
 		self.reason_code2 = get_element(segment, 5)
 		self.amount2 = get_element(segment, 6)
 		self.quantity2 = get_element(segment, 7)
