@@ -4,7 +4,7 @@ from typing import List
 from edi_835_parser.transaction_set.transaction_set import TransactionSet
 
 
-def parse(path: str, debug: bool=False) -> TransactionSet:
+def parse_from_file(path: str, debug: bool=False) -> TransactionSet:
 	if path[0] == '~':
 		path = os.path.expanduser(path)
 
@@ -14,15 +14,15 @@ def parse(path: str, debug: bool=False) -> TransactionSet:
 		for file in files:
 			file_path = f'{path}/{file}'
 			if debug:
-				transaction_set = TransactionSet.build(file_path)
+				transaction_set = TransactionSet.build_from_file(file_path)
 			else:
 				try:
-					transaction_set = TransactionSet.build(file_path)
+					transaction_set = TransactionSet.build_from_file(file_path)
 				except:
 					continue
 
 	else:
-		transaction_set = TransactionSet.build(path)
+		transaction_set = TransactionSet.build_from_file(path)
 
 	return transaction_set
 

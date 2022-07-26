@@ -10,7 +10,7 @@ files = find_edi_835_files(input_dir)
 
 for file in files:
 	file_path = f'{input_dir}/{file}'
-	transaction_set = parse(file_path)
+	transaction_set = parse_from_file(file_path)
 
 	remits_df = transaction_set.build_remits()
 	remits_df.insert(1, 'file_name', file, False)

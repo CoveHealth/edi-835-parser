@@ -780,14 +780,20 @@ class TransactionSet:
 		return {'service_line_adjustments_dict': service_line_adjustments_dict}
 
 	@classmethod
-	def build(cls, file_path: str) -> 'TransactionSet':
-		interchange = None
-		transactions = []
-
+	def build_from_file(cls, file_path: str) -> 'TransactionSet':
 		with open(file_path) as f:
 			file = f.read()
 
-		segments = file.split('~')
+                return cls.build(file)
+
+        @classmethod
+        def build(cls, transaction_string):
+
+                interchange = None
+		transactions = []
+
+
+		segments = transaction_string.split('~')
 		segments = [segment.strip() for segment in segments]
 		segments = [f'{index}:{segment}' for index, segment in enumerate(segments)]
 		segments = iter(segments)

@@ -13,29 +13,29 @@ current_path = os.path.dirname(os.path.abspath(__file__))
 @pytest.fixture
 def blue_cross_nc_sample():
 	path = current_path + '/test_edi_835_files/blue_cross_nc_sample.txt'
-	return edi_835_parser.parse(path)
+	return edi_835_parser.parse_from_file(path)
 
 
 @pytest.fixture
 def emedny_sample():
 	path = current_path + '/test_edi_835_files/emedny_sample.txt'
-	return edi_835_parser.parse(path)
+	return edi_835_parser.parse_from_file(path)
 
 
 @pytest.fixture
 def sample_835():
 	path = current_path + '/test_edi_835_files/sample_835.txt'
-	return edi_835_parser.parse(path)
+	return edi_835_parser.parse_from_file(path)
 
 
 # @pytest.fixture
 # def sample2_835():
 # 	path = current_path + '/test_edi_835_files/sample2_835.txt'
-# 	return edi_835_parser.parse(path)
+# 	return edi_835_parser.parse_from_file(path)
 #
 #
 # @pytest.fixture
 # def sample3_835():
 # 	path = current_path + '/test_edi_835_files/sample3_835.txt'
-# 	return edi_835_parser.parse(path)
+# 	return edi_835_parser.parse_from_file(path)
 
