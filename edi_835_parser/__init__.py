@@ -4,6 +4,9 @@ from typing import List
 from edi_835_parser.transaction_set.transaction_set import TransactionSet
 
 
+def parse(transaction_set) -> TransactionSet:
+	return TransactionSet.build(transaction_set_string)
+
 def parse_from_file(path: str, debug: bool=False) -> TransactionSet:
 	if path[0] == '~':
 		path = os.path.expanduser(path)
